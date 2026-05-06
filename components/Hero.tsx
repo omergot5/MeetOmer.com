@@ -47,6 +47,31 @@ export default function Hero() {
               {cv.bio}
             </motion.p>
 
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="mt-8 flex flex-col gap-4 sm:flex-row sm:gap-8 text-sm font-bold tracking-wide text-ink-soft"
+            >
+              <div className="flex items-center gap-3">
+                <span
+                  aria-hidden="true"
+                  className="grid h-9 w-9 place-items-center rounded-xl border border-white/60 bg-white/50 text-ink shadow-glass"
+                >
+                  <Phone className="h-4 w-4" />
+                </span>
+                <span>{cv.contact.phone}</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span
+                  aria-hidden="true"
+                  className="grid h-9 w-9 place-items-center rounded-xl border border-white/60 bg-white/50 text-ink shadow-glass"
+                >
+                  <Mail className="h-4 w-4" />
+                </span>
+                <span>{cv.contact.email}</span>
+              </div>
+            </motion.div>
           </div>
 
           {/* Column 2 — profile photo */}
@@ -97,7 +122,7 @@ export default function Hero() {
               <p className="mt-1 text-sm text-ink-soft">
                 {cv.education.program}
               </p>
-              <p className="mt-1 text-sm font-medium text-ink-soft">
+              <p className="mt-1 whitespace-pre-line text-sm font-medium text-ink-soft">
                 {cv.education.note}
               </p>
             </div>

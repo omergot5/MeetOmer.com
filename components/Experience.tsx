@@ -1,10 +1,10 @@
-import { HardHat, Shield, Workflow, type LucideIcon } from "lucide-react";
+import { HardHat, Cherry, Workflow, type LucideIcon } from "lucide-react";
 import { cv, type CompanyLogoId } from "@/lib/cv";
 import GlassCard from "./GlassCard";
 import SectionHeader from "./SectionHeader";
 
 const iconForCompany: Readonly<Record<CompanyLogoId, LucideIcon>> = {
-  idf: Shield,
+  idf: Cherry,
   scalify: Workflow,
   makeover: HardHat,
 };

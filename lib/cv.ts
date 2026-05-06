@@ -53,7 +53,7 @@ export const cv: CvData = {
   name: "Omer Gottlieb",
   title:
     "Industrial Engineering & Management Student (Information Systems Specialization)",
-  bio: "I’m a hands-on and motivated person. I like taking initiative and being in roles where I can grow, learn, and make things better. I’ve had experience leading in challenging situations, and I always try to bring creative thinking and practical solutions. When I’m part of something, I take responsibility and give it my full effort.",
+  bio: "I’m a hands-on and motivated person. I like taking initiative and being in roles where I can grow, learn, and make things better. I have experience leading in challenging situations, and I always try to bring creative thinking and practical solutions. When I’m part of something, I take responsibility and give it my full effort.",
   experience: [
     {
       id: "scalify",
@@ -62,7 +62,7 @@ export const cv: CvData = {
       period: "2025 - Present",
       logoId: "scalify",
       bullets: [
-        "Mapped full information flow and existing automations.",
+        "Mapped the complete information flow and existing automations.",
         "Built new GoHighLevel (GHL) automations for leads, reminders, and marketing.",
         "Troubleshot automation systems and ensured reliable data transfer.",
       ],
@@ -80,7 +80,7 @@ export const cv: CvData = {
     },
     {
       id: "idf",
-      company: "IDF — Duvdevan Unit",
+      company: "IDF - Duvdevan Unit",
       role: "Combat Soldier & Team Commander",
       period: "Military Service",
       logoId: "idf",
@@ -96,11 +96,11 @@ export const cv: CvData = {
       title: "Smart Shift Management App",
       subtitle: "",
       bullets: [
-        "Developed an HR management app using Cloud Code (Anti-Gravity) featuring an AI component for shift optimization.",
+        "Developed an HR management app using Claude Code (Anti-Gravity) featuring an AI component for shift optimization.",
         "Implemented cloud infrastructure using Supabase and GitHub for version control.",
         "Designed APIs to streamline complex real-time processes.",
       ],
-      tags: ["Cloud Code", "Supabase", "GitHub", "AI", "APIs"],
+      tags: ["Claude Code", "Supabase", "GitHub", "AI", "APIs"],
       cover: "url('/smart-shift.png')",
       url: "https://sceurityidf.vercel.app/",
     },
@@ -124,15 +124,15 @@ export const cv: CvData = {
     { id: "data", label: "Data Analysis" },
     { id: "sql", label: "SQL" },
     { id: "crm", label: "CRM" },
-    { id: "cloud-code", label: "Cloud Code" },
+    { id: "claude-code", label: "Claude Code" },
     { id: "ghl", label: "GHL" },
     { id: "automation", label: "Automation Tools" },
   ],
   education: {
     institution: "Ariel University",
-    period: "2018 - 2022",
+    period: "2024 - Present",
     program: "Industrial Engineering & Management Student",
-    note: "Year 3 — Information Systems Specialization",
+    note: "Year 3 - Information Systems Specialization\nGrade Average: 84",
   },
   contact: {
     phone: "052-6036426",
