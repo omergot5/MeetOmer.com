@@ -5,6 +5,7 @@ import {
   BarChart3,
   Database,
   Github,
+  Triangle,
   Users,
   Workflow,
   type LucideIcon,
@@ -24,7 +25,9 @@ const iconForSkill: Readonly<Record<string, IconComponent>> = {
   data: BarChart3,
   sql: Database,
   crm: Users,
-  "cloud-code": CloudCodeIcon,
+  "claude-code": CloudCodeIcon,
+  supabase: Database,
+  vercel: Triangle,
   ghl: GhlIcon,
   automation: Workflow,
 };

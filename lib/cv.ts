@@ -58,20 +58,20 @@ export const cv: CvData = {
     {
       id: "scalify",
       company: "Scalify",
-      role: "Practical Experience",
-      period: "2025 - Present",
+      role: "Practical Internship",
+      period: "2025",
       logoId: "scalify",
       bullets: [
-        "Mapped the complete information flow and existing automations.",
-        "Built new GoHighLevel (GHL) automations for leads, reminders, and marketing.",
-        "Troubleshot automation systems and ensured reliable data transfer.",
+        "Mapped the organization's data flow and existing automations to build an up-to-date situational overview.",
+        "Built new GoHighLevel (GHL) CRM automations for lead management, reminders, and marketing content, preventing lead loss and keeping processes continuous.",
+        "Identified and resolved issues in existing automation systems, ensuring data integrity and seamless transitions between platforms.",
       ],
     },
     {
       id: "makeover",
       company: "Makeover",
       role: "Logistics Manager",
-      period: "Past",
+      period: "2022",
       logoId: "makeover",
       bullets: [
         "Managed logistics for 8 concurrent work sites under pressure.",
@@ -82,7 +82,7 @@ export const cv: CvData = {
       id: "idf",
       company: "IDF - Duvdevan Unit",
       role: "Combat Soldier & Team Commander",
-      period: "Military Service",
+      period: "2018 - 2022",
       logoId: "idf",
       bullets: [
         "Commanded and led a team within the unit.",
@@ -93,16 +93,16 @@ export const cv: CvData = {
   projects: [
     {
       id: "smart-shift",
-      title: "Smart Shift Management App",
+      title: "NexRota - Smart Shift Management App",
       subtitle: "",
       bullets: [
-        "Developed an HR management app using Claude Code (Anti-Gravity) featuring an AI component for shift optimization.",
-        "Implemented cloud infrastructure using Supabase and GitHub for version control.",
-        "Designed APIs to streamline complex real-time processes.",
+        "Engineered a full-stack shift management application with an AI-powered scheduling optimization module, built with AI development tools (Claude Code).",
+        "Architected the backend and database on Supabase, deployed the frontend on Vercel, and managed version control with GitHub.",
+        "Designed and integrated APIs across system components to streamline complex real-time operations.",
       ],
-      tags: ["Claude Code", "Supabase", "GitHub", "AI", "APIs"],
+      tags: ["Claude Code", "Supabase", "Vercel", "GitHub", "AI", "APIs"],
       cover: "url('/smart-shift.png')",
-      url: "https://sceurityidf.vercel.app/",
+      url: "https://nexrota-omergot5s-projects.vercel.app/",
     },
     {
       id: "crime-baltimore",
@@ -121,6 +121,8 @@ export const cv: CvData = {
   skills: [
     { id: "python", label: "Python" },
     { id: "github", label: "GitHub" },
+    { id: "supabase", label: "Supabase" },
+    { id: "vercel", label: "Vercel" },
     { id: "data", label: "Data Analysis" },
     { id: "sql", label: "SQL" },
     { id: "crm", label: "CRM" },
@@ -130,9 +132,9 @@ export const cv: CvData = {
   ],
   education: {
     institution: "Ariel University",
-    period: "2024 - Present",
+    period: "2023 - Present",
     program: "Industrial Engineering & Management Student",
-    note: "Year 3 - Information Systems Specialization\nGrade Average: 84",
+    note: "Year 4 - Information Systems Specialization\nGrade Average: 84",
   },
   contact: {
     phone: "052-6036426",
