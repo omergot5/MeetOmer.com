@@ -13,7 +13,7 @@ import {
 import { type ComponentType, type SVGProps } from "react";
 import { cv } from "@/lib/cv";
 import SectionHeader from "./SectionHeader";
-import { CloudCodeIcon, GhlIcon, PythonIcon } from "./icons/SkillIcons";
+import { ClaudeCodeIcon, GhlIcon, PythonIcon } from "./icons/SkillIcons";
 
 type IconComponent =
   | LucideIcon
@@ -25,7 +25,7 @@ const iconForSkill: Readonly<Record<string, IconComponent>> = {
   data: BarChart3,
   sql: Database,
   crm: Users,
-  "claude-code": CloudCodeIcon,
+  "claude-code": ClaudeCodeIcon,
   supabase: Database,
   vercel: Triangle,
   ghl: GhlIcon,
@@ -54,7 +54,7 @@ export default function Skills() {
             hidden: {},
             show: { transition: { staggerChildren: 0.04 } },
           }}
-          className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4"
+          className="flex flex-wrap justify-center gap-3"
           role="list"
         >
           {cv.skills.map((s) => {
@@ -67,6 +67,7 @@ export default function Skills() {
                   show: { opacity: 1, y: 0 },
                 }}
                 transition={{ duration: 0.35, ease: "easeOut" }}
+                className="w-[calc(50%-0.375rem)] sm:w-[calc(33.333%-0.5rem)] md:w-[calc(25%-0.5625rem)]"
               >
                 <div className="group flex h-full flex-col items-center justify-center gap-3 rounded-2xl border border-white/50 bg-white/40 p-5 text-center shadow-glass backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/80 hover:bg-white/60">
                   <span

@@ -19,6 +19,26 @@ const navItems: readonly NavItem[] = [
 
 export default function MobileNav() {
   const [open, setOpen] = useState<boolean>(false);
+  const [active, setActive] = useState<string>("about");
+
+  useEffect(() => {
+    const sections = navItems
+      .map((n) => document.getElementById(n.id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const top = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (top && top.target.id) setActive(top.target.id);
+      },
+      { rootMargin: "-30% 0px -55% 0px", threshold: [0.1, 0.3, 0.6] },
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -69,20 +89,28 @@ export default function MobileNav() {
           className="mx-auto mt-2 max-w-3xl rounded-2xl border border-white/40 bg-white/40 p-3 shadow-glass backdrop-blur-md backdrop-saturate-150"
         >
           <ul className="space-y-1" role="list">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  onClick={() => setOpen(false)}
-                  className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-bold tracking-[0.18em] text-ink-soft transition-colors hover:bg-white/60 hover:text-ink"
-                >
-                  {item.label}
-                  <span aria-hidden="true" className="text-ink-mute">
-                    &rarr;
-                  </span>
-                </a>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const isActive = active === item.id;
+              return (
+                <li key={item.id}>
+                  <a
+                    href={`#${item.id}`}
+                    onClick={() => setOpen(false)}
+                    aria-current={isActive ? "true" : undefined}
+                    className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-bold tracking-[0.18em] transition-colors hover:bg-white/60 hover:text-ink ${
+                      isActive
+                        ? "bg-white/70 text-ink shadow-glass"
+                        : "text-ink-soft"
+                    }`}
+                  >
+                    {item.label}
+                    <span aria-hidden="true" className="text-ink-mute">
+                      &rarr;
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       ) : null}

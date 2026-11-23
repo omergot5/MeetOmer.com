@@ -37,6 +37,30 @@ export function CloudCodeIcon(props: IconProps) {
   );
 }
 
+export function ClaudeCodeIcon(props: IconProps) {
+  return (
+    <svg
+      {...baseProps}
+      stroke="#D97757"
+      strokeWidth={2.6}
+      {...props}
+    >
+      <path d="M12.00 10.80L12.00 1.80" />
+      <path d="M12.60 10.96L15.70 5.59" />
+      <path d="M13.04 11.40L20.14 7.30" />
+      <path d="M13.20 12.00L19.00 12.00" />
+      <path d="M13.04 12.60L20.66 17.00" />
+      <path d="M12.60 13.04L15.80 18.58" />
+      <path d="M12.00 13.20L12.00 21.60" />
+      <path d="M11.40 13.04L8.40 18.24" />
+      <path d="M10.96 12.60L3.17 17.10" />
+      <path d="M10.80 12.00L4.60 12.00" />
+      <path d="M10.96 11.40L4.03 7.40" />
+      <path d="M11.40 10.96L8.50 5.94" />
+    </svg>
+  );
+}
+
 export function GhlIcon(props: IconProps) {
   return (
     <svg {...baseProps} {...props}>
